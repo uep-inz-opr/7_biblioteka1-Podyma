@@ -4,7 +4,7 @@ class Biblioteka(list):
     self.append(ksiazka)
 
   def wydruk(self):
-    wynik = sorted(set([(ksiazka.tytul, ksiazka.autor, ksiazka.rok) for ksiazka in self]), key = lambda x: x[0])
+    wynik = sorted(set([(ksiazka.tytul, ksiazka.autor, self.count(ksiazka)) for ksiazka in self]), key = lambda x: x[0])
     for ksiazka in wynik:
       print(ksiazka)
 
